@@ -6,43 +6,51 @@
 }
 html,body{
     /* width: 100%; */
-    height: 100%;
+    height: auto;
     background: rgb(216, 216, 216);
-}
-
-.nav-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    background: rgb(201, 201, 201);
 }
 .pages{
     display: flex;
-    margin: 30px;
-    gap: 25px;
-    margin-left: 150px;
-    
+    gap: 1rem;    
 }
 a{
     text-decoration: none;
     color: black;
+    font-size: 1rem;
 } 
 .opt{
-    height: 30px;
-    margin: 10px;
+    height: 1.2rem;
+    margin: 0.5rem;
+}
+.options{
+    margin-right: 2rem;
+}
+.pages a:hover {
+    color:rgb(232, 232, 232);
+    animation: pg 0.5s ease;
 }
 .nk{
-    height: 60px;
+    height: 3rem;
+    margin-left: 2rem;
 }
 
+
+.nav-container{
+    width: 100%;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
 .nav{
-    width: 90%;
+    width: 100%;
     min-height: 10vh;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
+    background: rgb(201, 201, 201);
 }
 
 /* TEXT */
@@ -61,10 +69,13 @@ h6{
 
 
 .content{
-    height: 90vh;
-    width: 90%;
+    height: auto;
+    /* width: 100%; */
+    z-index: 0;
     margin: auto;
-    /* padding-top: 100px; */
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,11 +112,13 @@ h6{
     border-radius: 20px;
     border-top-left-radius: 0px;
 }
-
+.foot{
+    display: none;
+}
 
 .shoe{
-    height: 450px;
-    width: 280px;
+    height: 30rem;
+    width: 18rem;
     background-color: rgb(244, 244, 244);
     position: relative;
     box-shadow: 0px 2px 15px rgba(0, 0, 0,.3);
@@ -125,7 +138,7 @@ h6{
     bottom: 0%;
     right: 0%;
     background:  rgb(201, 201, 201);
-    padding: 15px;
+    padding: 1rem;
     text-transform: uppercase;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -137,7 +150,16 @@ h6{
     right: 0%;
     background:  rgb(0, 0, 0);
     color: white;
-    padding: 15px;
+    padding: 1rem;
     text-transform: uppercase;
     border-top-left-radius: 20px;
+}
+
+@keyframes pg{
+    0%{
+        color: black;
+    }
+    100%{
+        color: white;
+    }
 }
